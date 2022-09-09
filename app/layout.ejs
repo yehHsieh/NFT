@@ -1,61 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%- title %></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/style/all.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    <%- title %>
+  </title>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=Quicksand&family=Squada+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <!-- nav bar -->
+  <div class="bg-secondary">
+    <nav class="navbar navbar-expand-lg navbar-light py-4 py-lg-6 container overflow-hidden">
+      <div class="navOrigin d-flex justify-content-between w-100">
+        <a class="navbar-brand p-0" href="#">
+          <h1 class="hideLogo m-0">Logo</h1>
+        </a>
+        <!-- iphone、ipad nav-->
+        <div class=" d-lg-none">
+          <a href="#" class=" d-inline-block fs-5"><i class="fa fa-search fa-search-sm text-black me-5"
+              aria-hidden="true"></i></a>
+          <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa fa-bars text-black fs-5" aria-hidden="true"></i>
+          </button>
+        </div>
+        <!-- laptop nav-->
+        <div class="d-none d-lg-block">
+          <ul class="p-0 d-flex align-items-center">
+            <li class="px-8 side-line">
+              <form action="#" class="d-inline">
+                <input type="text" placeholder="搜尋作品名稱、藝術家名稱" class="text-light bg-secondary border-0 fs-6" style="width: 288px;">
+              </form>
+              <a href="#" class="d-inline-block fs-3"><i class="fa fa-search ms-5"
+                  aria-hidden="true"></i></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+            <li class="side-line">
+              <a href="#" class="text-hover px-8">探索</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+            <li class="side-line">
+              <a href="#" class="text-hover px-8">市值</a>
+            </li>
+            <li class="side-line">
+              <a href="#" class="text-hover px-8">
+                <i class="fa-solid fa-wallet fs-3"></i>
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
-    </nav>
+      <!-- search placeholder -->
+      <div class="container searchHolder d-none d-flex">
+        <div class="w-75">
+          <button class="border-0 me-4 p-0">
+            <i class="fa fa-angle-left fa-angle-left-sm fw-bold" aria-hidden="true"></i>
+          </button>
+          <form action="#" class="d-inline w-75">
+            <input type="text" placeholder="搜尋作品名稱、藝術家名稱" class="text-light bg-secondary border-0 fs-7 w-75">
+          </form>
+        </div>
+        <a href="#" class="d-inline-block fs-5"><i class="fa fa-search text-black me-5" aria-hidden="true"></i></a>
+      </div>
+  </div>
 
-    <%- contents %>
 
-    <footer class="footer">
-      footer
+  <!-- nav-drop -->
+  <div class="collapse navbar-collapse bg-white" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-none">
+      <li class="nav-item">
+        <a class="nav-link text-center text-black fw-bold fs-5" aria-current="page" href="#">探索</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center text-black fw-bold fs-5" href="#">市值</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center text-white fw-bold fs-5 bg-primary" href="#">連結錢包</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+
+
+
+  <%- contents %>
+
+    <footer class="footer bg-secondary container py-5 text-center">
+      <p style="font-family: Noto Sans TC;">© ART NFT. All Rights Reserved</p>
     </footer>
 
+    <script src="https://kit.fontawesome.com/cfc080f088.js" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/ca92fbb218.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
-  </body>
+</body>
 
 </html>

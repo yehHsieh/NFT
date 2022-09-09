@@ -3,4 +3,11 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
 
-@import './layout/index.scss'
+@import './mixin/mixin';
+@import './helpers/utilities';
+@import './helpers/variables';
+@import './utility/utilities';
+@import './layout/component';
+@import './layout/base';
+@import './pages/index';
+
