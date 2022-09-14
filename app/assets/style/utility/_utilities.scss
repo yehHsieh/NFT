@@ -3,3 +3,39 @@
         color: $primary;
     }
 }
+
+.vertical-text{
+    writing-mode: vertical-lr;
+}
+
+.img-cover{
+    object-fit: cover;
+}
+.img-contain{
+    object-fit: contain;
+}
+.img-fill{
+    object-fit: fill;
+}
+.img-top{
+    object-position: top;
+}
+
+.hover-show:hover{
+    opacity: 1;
+}
+
+.z-index-2{
+    z-index: 2;
+}
+
+.text-show:hover{
+    .text-show{
+        display: block !important;
+    }
+}
+
+// ratio
+.ratio-3_2 {
+    aspect-ratio: 3/2;
+}

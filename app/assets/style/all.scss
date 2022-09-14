@@ -1,13 +1,15 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "./helpers/variables";
+@import './helpers/utilities';
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
 
 @import './mixin/mixin';
-@import './helpers/utilities';
-@import './helpers/variables';
 @import './utility/utilities';
 @import './layout/component';
 @import './layout/base';
 @import './pages/index';
 
+*{
+    // outline: 1px solid black;
+}
