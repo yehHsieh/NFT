@@ -1,27 +1,23 @@
-$(function() {
+"use strict";
+
+$(function () {
   console.log('Hello Bootstrap5');
 });
-
 $(document).ready(function () {
-  $('.fa-search-sm').click(
-    function (event) {
-      $('.navOrigin').addClass('d-none');
-      $('.searchHolder').removeClass('d-none');
-    });
-
-  $('.fa-angle-left-sm').click(
-    function (event) {
-      $('.searchHolder').addClass('d-none');
-      $('.navOrigin').removeClass('d-none');
-    });
+  $('.fa-search-sm').click(function (event) {
+    $('.navOrigin').addClass('d-none');
+    $('.searchHolder').removeClass('d-none');
+  });
+  $('.fa-angle-left-sm').click(function (event) {
+    $('.searchHolder').addClass('d-none');
+    $('.navOrigin').removeClass('d-none');
+  });
 });
-
 var swiper = new Swiper(".iphoneSwiper", {
   loop: true,
   speed: 500,
   // autoplay: {
   //   delay: 3000,
-  
   // },
   disableOnInteraction: false,
   centeredSlides: true,
@@ -41,7 +37,8 @@ var swiper = new Swiper(".iphoneSwiper", {
   effect: 'slide',
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    clickable: true
   },
-  grabCursor: true,
+  grabCursor: true
 });
+//# sourceMappingURL=all.js.map
